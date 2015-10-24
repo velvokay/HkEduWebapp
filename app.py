@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template 
 from flask.ext.sqlalchemy import SQLAlchemy 
 from models import * 
 
@@ -11,22 +11,16 @@ with app.app_context():
     db.session.commit()
 
 @app.route("/")
-def hello():
-    return "Hello World!"
+def home():
+    return render_template("index.html")
 
-@app.route("/goodbye")
-def goodbye():
-    return "Goodbye Friends"
+@app.route("/login")
+def login():
+    return render_template("login.html")
 
-@app.route("/square/<value>")
-def return_square(value):
-    result = square(int(value))
-    return result 
-
-def square(x): 
-    result = x * x
-    return result
-
+@app.route("/register")
+def register():
+    return render_template("register.html")
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", debug = True)
