@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
+    <title>Hacking Edu 2K15</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -42,44 +42,11 @@
             </div>
         </div>
     </nav>
-    <form>
-        <div class="form-group">
-            <label for="inputEmail">Email address</label>
-            <input type="email" class="form-control" id="inputEmail" placeholder="Email">
-        </div>
-        <div class="form-group">
-            <label for="inputUser">Username</label>
-            <input type="text" class="form-control" id="inputUser" placeholder="User">
-        </div>
-        <div class="form-group">
-            <label for="inputPassword">Password</label>
-            <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-        </div>
-        <div>
-            <label for="inputGroup">Group name</label>
-            <input type="text" class="form-control" id="inputGroup" placeholder="Group";
-        </div>
-        <button type="submit" class="btn btn-default" id="regSubmit">Submit</button>
-        <script>
-            <!--function testAlert()
-            {
-                var inpObj = document.getElementById("inputEmail").value;
-                alert(inpObj);
-            };
-            $('#regSubmit').on('click', function()
-            {
-                testAlert();
-            })-->
-            var inpEmail=document.getElementById("inputEmail").value;
-            var inpUser=document.getElementById("inputUser").value;
-            var inpPassword=document.getElementById("inputPassword").value;
-            var inpGroup=document.getElementById("inputGroup").value;
-            function registerInfo()
-            {
-                document.cookie="username="+inpUser
-            }
-        </script>
-    </form>
-
+    <div class="container-fluid" style="text-align:center">
+        <h1>Hello, Username!</h1>
+        <a href="/HkEduWebapp/templates/projects.html" class="btn btn-default btn-lg btn-success" role="button">Your group</a>
+        <h2>Group</h2>
+        <a href="/HkEduWebapp/templates/newproject.html" class="btn btn-default btn-lg btn-success" role="button">Create a new group</a>
+    </div>
 </body>
 </html>
