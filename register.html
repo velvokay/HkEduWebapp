@@ -1,16 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <style>
-        body {
-            <!-- background-image: url("images/background.JPG");
-            background-repeat: no-repeat;
-
-            -ms-filter: blur(5px);
-            filter: blur(5px); -->
-        }
-    </style>
-    <title>Hacking Edu 2K15</title>
+    <meta charset="UTF-8">
+    <title>Login</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -18,7 +10,6 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
 <body style="background-color:lightblue">
-
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -51,27 +42,25 @@
             </div>
         </div>
     </nav>
-
-<div class="container" style="text-align:center">
-    <h1 style="color:black">Project</h1>
-    <h1 style="color:black">Welcome to PLACEHOLDER NAME</h1>
-    <h2 style="color:black">2K15</h2>
-    <h2 style="color:black">------------------</h2>
-    <button class="btn btn0" type="submit">Button</button>
-    <button class="btn btn1" type="submit">Button1</button>
-    <button class="btn btn2" type="submit">Button2</button>
-    <button class="btn btn3" type="submit">Button3</button>
-    <button type="button" id="primButton1" data-complete-text="On" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
-        Off
-    </button>
-
-    <script>
-        $('#primButton1').on('click', function()
-        {
-            $(this).button('complete')
-        })
-    </script>
-</div>
+    <form>
+        <div class="input">
+            <label for="inputEmail">Email address</label>
+            <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+        </div>
+        <div class="emailConfirm">
+            <label for="emailConfirm">Confirm email address</label>
+            <input type="email" class="form-control" id="emailConfirm" placeholder="Confirm email">
+        </div>
+        <div class="form-group">
+            <label for="inputPassword">Password</label>
+            <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+        </div>
+        <div class="form-group">
+            <label for="passwordConfirm">Confirm password</label>
+            <input type="password" class="form-control" id="passwordConfirm" placeholder="Confirm password">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form>
 
 </body>
 </html>
