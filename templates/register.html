@@ -18,11 +18,11 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/HkEduWebapp/index.html">Hacking Edu</a>
+                <a class="navbar-brand" href="/HkEduWebapp/templates/index.html">Hacking Edu</a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="/HkEduWebapp/index.html">Home</a></li>
+                    <li class="active"><a href="/HkEduWebapp/templates/index.html">Home</a></li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Projects <span class="caret"></span></a>
                         <ul class="dropdown-menu">
@@ -33,8 +33,8 @@
                     </li>
                     <li><a href="http://www.github.com/velvokay/HkEduWebapp">Github</a></li>
                     <li><a href="#">Devpost</a></li>
-                    <li><a href="/HkEduWebapp/login.html">Login</a></li>
-                    <li><a href="/HkEduWebapp/register.html">Register</a></li>
+                    <li><a href="/HkEduWebapp/templates/login.html?">Login</a></li>
+                    <li><a href="/HkEduWebapp/templates/register.html?">Register</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
 
@@ -43,23 +43,34 @@
         </div>
     </nav>
     <form>
-        <div class="input">
+        <div class="form-group">
             <label for="inputEmail">Email address</label>
             <input type="email" class="form-control" id="inputEmail" placeholder="Email">
         </div>
-        <div class="emailConfirm">
-            <label for="emailConfirm">Confirm email address</label>
-            <input type="email" class="form-control" id="emailConfirm" placeholder="Confirm email">
+        <div class="form-group">
+            <label for="inputUser">Username</label>
+            <input type="text" class="form-control" id="inputUser" placeholder="User">
         </div>
         <div class="form-group">
             <label for="inputPassword">Password</label>
             <input type="password" class="form-control" id="inputPassword" placeholder="Password">
         </div>
-        <div class="form-group">
-            <label for="passwordConfirm">Confirm password</label>
-            <input type="password" class="form-control" id="passwordConfirm" placeholder="Confirm password">
+        <div>
+            <label for="inputGroup">Group name</label>
+            <input type="text" class="form-control" id="inputGroup" placeholder="Group";
         </div>
-        <button type="submit" class="btn btn-default">Submit</button>
+        <button type="submit" class="btn btn-default" id="regSubmit">Submit</button>
+        <script>
+            function testAlert()
+            {
+                var inpObj = document.getElementById("inputEmail").value;
+                alert(inpObj);
+            };
+            $('#regSubmit').on('click', function()
+            {
+                testAlert();
+            })
+        </script>
     </form>
 
 </body>
