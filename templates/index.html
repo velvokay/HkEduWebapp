@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head onload="checkInfo()">
     <style>
         body {
             <!-- background-image: url("images/background.JPG");
@@ -10,6 +10,7 @@
             filter: blur(5px); -->
         }
     </style>
+
     <title>Hacking Edu 2K15</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,7 +18,16 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
-<body style="background-color:lightblue">
+<body style="background-color:lightblue" >
+    <script>
+        function checkInfo(a)
+        {
+            var user = getUserInfo(a);
+
+            alert("Welcome back, " + user);
+
+        }
+    </script>
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -56,6 +66,7 @@
     <h1 style="color:black">Welcome to PLACEHOLDER NAME</h1>
     <h2 style="color:black">2K15</h2>
     <h2 style="color:black">------------------</h2>
+
     <button class="btn btn0" type="submit">Button</button>
     <button class="btn btn1" type="submit">Button1</button>
     <button class="btn btn2" type="submit">Button2</button>

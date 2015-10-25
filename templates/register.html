@@ -9,7 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
-<body style="background-color:lightblue">
+<body style="background-color:lightblue" onload="checkInfo()">
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -44,42 +44,37 @@
     </nav>
     <form>
         <div class="form-group">
-            <label for="inputEmail">Email address</label>
-            <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="email" placeholder="Email">
         </div>
         <div class="form-group">
-            <label for="inputUser">Username</label>
-            <input type="text" class="form-control" id="inputUser" placeholder="User">
+            <label for="username">Username</label>
+            <input type="text" class="form-control" id="username" placeholder="User">
         </div>
         <div class="form-group">
-            <label for="inputPassword">Password</label>
-            <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="Password">
         </div>
         <div>
-            <label for="inputGroup">Group name</label>
-            <input type="text" class="form-control" id="inputGroup" placeholder="Group";
+            <label for="groupName">Group name</label>
+            <input type="text" class="form-control" id="groupName" placeholder="Group">
         </div>
-        <button type="submit" class="btn btn-default" id="regSubmit">Submit</button>
+        <button type="submit" id="regSubmit" class="btn btn-default">Submit</button>
         <script>
-            <!--function testAlert()
-            {
-                var inpObj = document.getElementById("inputEmail").value;
-                alert(inpObj);
-            };
-            $('#regSubmit').on('click', function()
-            {
-                testAlert();
-            })-->
-            var inpEmail=document.getElementById("inputEmail").value;
-            var inpUser=document.getElementById("inputUser").value;
-            var inpPassword=document.getElementById("inputPassword").value;
-            var inpGroup=document.getElementById("inputGroup").value;
-            function registerInfo()
-            {
-                document.cookie="username="+inpUser
+            function getUserInfo(n) {
+                var email=document.getElementById("email").value;
+                var username=document.getElementById("username").value;
+                var password=document.getElementById("password").value;
+                var groupName=document.getElementById("groupName").value;
+                var userInfo = [email, username, password, group_id];
+                return userInfo[n];
             }
+
         </script>
     </form>
+    <script>
+
+    </script>
 
 </body>
 </html>
