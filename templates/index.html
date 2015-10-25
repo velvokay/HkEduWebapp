@@ -1,23 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head onload="checkInfo()">
     <style>
         body {
-            <!-- background-image: url("images/background.JPG");
+            <!--background-image: url("/HkEduWebapp/background.jpg");
             background-repeat: no-repeat;
 
             -ms-filter: blur(5px);
-            filter: blur(5px); -->
+            filter: blur(5px);
+            -->
         }
     </style>
+
     <title>Hacking Edu 2K15</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="/HkEduWebapp/flexslider.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script src="/HkEduWebapp/jquery.flexslider.js"></script>
+    <script src="/HkEduWebapp/Modernizr.js"></script>
 </head>
-<body style="background-color:lightblue">
+<body style="color:white">
+    <script>
+        function checkInfo(a)
+        {
+            var user = getUserInfo(a);
+
+            alert("Welcome back, " + user);
+
+        }
+    </script>
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -50,27 +66,63 @@
             </div>
         </div>
     </nav>
+    <!--div class="container" style="text-align:center">
+        <script>
+            // Can also be used with $(document).ready()
+            $(window).load(function() {
+                $('.flexslider').flexslider({
+                    animation: "slide"
+                });
+            });
+        </script>
+        <h1 style="color:black">Project</h1>
+        <h1 style="color:black">Welcome to PLACEHOLDER NAME</h1>
+        <h2 style="color:black">2K15</h2>
+        <h2 style="color:black">------------------</h2>
 
-<div class="container" style="text-align:center">
-    <h1 style="color:black">Project</h1>
-    <h1 style="color:black">Welcome to PLACEHOLDER NAME</h1>
-    <h2 style="color:black">2K15</h2>
-    <h2 style="color:black">------------------</h2>
-    <button class="btn btn0" type="submit">Button</button>
-    <button class="btn btn1" type="submit">Button1</button>
-    <button class="btn btn2" type="submit">Button2</button>
-    <button class="btn btn3" type="submit">Button3</button>
-    <button type="button" id="primButton1" data-complete-text="On" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
-        Off
-    </button>
+        <button class="btn btn0" type="submit">Button</button>
+        <button class="btn btn1" type="submit">Button1</button>
+        <button class="btn btn2" type="submit">Button2</button>
+        <button class="btn btn3" type="submit">Button3</button>
+        <button type="button" id="primButton1" data-complete-text="On" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
+            Off
+        </button>
 
-    <script>
-        $('#primButton1').on('click', function()
-        {
-            $(this).button('complete')
-        })
-    </script>
-</div>
-
+        <script>
+            $('#primButton1').on('click', function()
+            {
+                $(this).button('complete')
+            })
+        </script>
+    </div-->
+    <div class="flexslider">
+        <script>
+            // Can also be used with $(document).ready()
+            $(window).load(function() {
+                $('.flexslider').flexslider({
+                    animation: "slide"
+                });
+            });
+        </script>
+        <ul class="slides">
+            <li>
+                <img src="/HkEduWebapp/slide1.jpg" />
+                <div class="caption" style="position:absolute; -webkit-font-smoothing: antialiased; text-align: center">
+                    <p style="color:black">
+                        Cloud databases for the world.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <img src="/HkEduWebapp/slide2.jpg" />
+            </li>
+            <li>
+                <img src="/HkEduWebapp/slide3.jpg" />
+            </li>
+            <li>
+                <img src="/HkEduWebapp/slide4.jpg" />
+            </li>
+        </ul>
+    </div>
 </body>
 </html>
