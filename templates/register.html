@@ -9,7 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
-<body style="background-color:lightblue" onload="checkInfo()">
+<body style="background-color:lightblue">
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -59,16 +59,17 @@
             <label for="groupName">Group name</label>
             <input type="text" class="form-control" id="groupName" placeholder="Group">
         </div>
-        <button type="submit" id="regSubmit" class="btn btn-default">Submit</button>
+        <button type="submit" id="regSubmit" onclick="getUser()" class="btn btn-default">Submit</button>
         <script>
-            function getUserInfo(n) {
                 var email=document.getElementById("email").value;
                 var username=document.getElementById("username").value;
                 var password=document.getElementById("password").value;
                 var groupName=document.getElementById("groupName").value;
-                var userInfo = [email, username, password, group_id];
-                return userInfo[n];
-            }
+                docCookies.setItem(email, username, password, group_id);
+                function getUser()
+                {
+                    alert(docCookies.getItem(username));
+                }
 
         </script>
     </form>

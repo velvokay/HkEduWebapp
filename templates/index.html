@@ -19,6 +19,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
+
     <link rel="stylesheet" href="/HkEduWebapp/flexslider.css" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
     <script src="/HkEduWebapp/jquery.flexslider.js"></script>
@@ -29,8 +30,14 @@
         function checkInfo(a)
         {
             var user = getUserInfo(a);
-
-            alert("Welcome back, " + user);
+            if(user!=="")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
 
         }
     </script>
@@ -61,7 +68,12 @@
                     <li><a href="/HkEduWebapp/templates/register.html?">Register</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-
+                    <script>
+                        if(getUserInfo(1)==true)
+                        {
+                            alert("dwad");
+                        }
+                    </script>
                 </ul>
             </div>
         </div>
@@ -105,13 +117,19 @@
             });
         </script>
         <ul class="slides">
-            <li>
+            <li class>
                 <img src="/HkEduWebapp/slide1.jpg" />
-                <div class="caption" style="position:absolute; -webkit-font-smoothing: antialiased; text-align: center">
-                    <p style="color:black">
-                        Cloud databases for the world.
-                    </p>
-                </div>
+                <div class="flex-caption" style="
+                    bottom: 50px;
+                    color: black;
+                    font-size: 16px;
+                    line-height: 20px;
+                    left:0;
+                    padding:0 20px;
+                    position: absolute;
+                    right:0;
+                    text-transform: uppercase;
+                    z-index:1;"><p>Cloud databases for the world.</p></div>
             </li>
             <li>
                 <img src="/HkEduWebapp/slide2.jpg" />
